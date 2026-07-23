@@ -13,6 +13,10 @@ dist
 dist-ssr
 coverage
 *.local
+.env
+
+# Downloaded anime cover images
+public/anime-covers/
 
 # Editor directories and files
 .vscode/*
@@ -27,6 +31,10 @@ coverage
 *.tsbuildinfo
 
 .eslintcache
+
+# Python
+__pycache__/
+*.pyc
 
 # Cypress
 /cypress/videos/
