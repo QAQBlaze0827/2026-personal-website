@@ -10,7 +10,7 @@
 
     <!-- 卡片 -->
     <div class="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-      <a v-for="anime in pagedAnimeItems" :key="anime.url" :href="anime.url" target="_blank" rel="noopener noreferreer"
+      <a v-for="anime in pagedAnimeItems" :key="anime.title" :href="anime.url" target="_blank" rel="noopener noreferreer"
         class="group overflow-hidden rounded-lg border border-white/10 bg-white/5 transition hover:border-white/20 hover:bg-white/10">
         <!-- 卡片內容 aspect-[3/4] 固定圖片比例；object-cover 讓圖片填滿但不變形 -->
         <div class="aspect-[3/4] overflow-hidden bg-zinc-900">

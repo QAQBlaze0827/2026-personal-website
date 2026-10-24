@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "title": "JOJO 的奇妙冒險 第一部：幻影血脈",
+    "image": "/manual-anime-covers/jojo-part-1.jpg",
+    "url": "https://jojo-portal.com/anime/pb-bt/"
+  },
+  {
+    "title": "JOJO 的奇妙冒險 第二部：戰鬥潮流",
+    "image": "/manual-anime-covers/jojo-part-2.jpg",
+    "url": "https://jojo-portal.com/anime/pb-bt/"
+  },
+  {
+    "title": "JOJO 的奇妙冒險 第三部：星塵鬥士",
+    "image": "/manual-anime-covers/jojo-part-3.jpg",
+    "url": "https://jojo-portal.com/anime/sc/"
+  },
+  {
+    "title": "JOJO 的奇妙冒險 第四部：不滅鑽石",
+    "image": "/manual-anime-covers/jojo-part-4.jpg",
+    "url": "https://jojo-portal.com/anime/du/"
+  },
+  {
+    "title": "JOJO 的奇妙冒險 第五部：黃金之風",
+    "image": "/manual-anime-covers/jojo-part-5.png",
+    "url": "https://jojo-portal.com/anime/gw/"
+  },
+  {
+    "title": "JOJO 的奇妙冒險 第六部：石之海",
+    "image": "/manual-anime-covers/jojo-part-6.png",
+    "url": "https://jojo-portal.com/anime/so/"
+  },
+  {
+    "title": "命運石之門",
+    "image": "/manual-anime-covers/steins-gate.jpg",
+    "url": "https://anilist.co/anime/9253"
+  },
+  {
+    "title": "命運石之門 0",
+    "image": "/manual-anime-covers/steins-gate-0.jpg",
+    "url": "https://anilist.co/anime/21127"
+  }
+]
