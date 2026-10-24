@@ -8,6 +8,14 @@
       這裡整理我再巴哈姆特動畫瘋收藏的動畫
     </p>
 
+    <!-- v-model 會同步保存使用者輸入的搜尋文字 -->
+    <div class="mt-6">
+      <label for="anime-search" class="sr-only">搜尋動漫</label>
+      <input id="anime-search" v-model="searchText" type="search" placeholder="搜尋動漫名稱"
+      class="w-full max-w-md rounded-md border border-white/10 bg-white/5 px-4 py-2.5 text-zinc-100 outline-none transition placeholder:text-zinc-500 focus:border-white/30 focus:bg-white/10">
+
+    </div>
+
     <!-- 卡片 -->
     <div class="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
       <a v-for="anime in pagedAnimeItems" :key="anime.title" :href="anime.url" target="_blank" rel="noopener noreferreer"
@@ -54,17 +62,29 @@ const animeItems: Anime[] = [
   ...(bahamutAnimeList as Anime[]),
   ...(manualAnimeList as Anime[]),
 ]
-
+//ref 保存搜尋框的文字
+const searchText = ref('')
 const currentPage = ref(1)
 const pageSize = 24
 
+const filteredAnimeItems = computed(() =>{
+  const keyword  = searchText.value.trim().toLocaleLowerCase()
+
+  if (!keyword) {
+    return animeItems
+  }
+  return animeItems.filter((anime) =>{
+    return anime.title.toLocaleLowerCase().includes(keyword)
+  })
+})
+
 const totalPages = computed(() => {
-  return Math.ceil(animeItems.length / pageSize)
+  return Math.ceil(filteredAnimeItems.value.length / pageSize)
 })
 
 const pagedAnimeItems = computed(() => {
   const start = (currentPage.value - 1) * pageSize
   const end = start + pageSize
-  return animeItems.slice(start, end)
+  return filteredAnimeItems.value.slice(start, end)
 })
 </script>
