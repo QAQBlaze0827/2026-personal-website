@@ -39,7 +39,8 @@
 </template>
 
 <script setup lang="ts">
-import animeList from '../data/anime.json'
+import bahamutAnimeList from '../data/anime-bahamut.json'
+import manualAnimeList from '../data/anime-manual.json'
 import { computed, ref } from 'vue'
 type Anime = {
   title: string
@@ -48,7 +49,11 @@ type Anime = {
   sourceImage?: string
 }
 
-const animeItems = animeList as Anime[]
+// 使用展開運算子 ...，把爬蟲資料和手動資料合併成同一個陣列。
+const animeItems: Anime[] = [
+  ...(bahamutAnimeList as Anime[]),
+  ...(manualAnimeList as Anime[]),
+]
 
 const currentPage = ref(1)
 const pageSize = 24
